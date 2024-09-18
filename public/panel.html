@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Panel</title>
+	</head>
+	<style>
+		body,
+		html {
+			margin: 0;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 100vh;
+			padding: 20px;
+			font-family: Arial, sans-serif;
+			font-size: 20px;
+			text-align: center;
+		}
+
+		.box_2 {
+			margin: 10px;
+			width: 60%;
+			border: 1px solid black;
+			justify-content: center;
+			color: #333;
+			align-items: center;
+			background-color: #f8f8f8;
+			border-radius: 5px;
+			box-shadow: 0 0 5px #333;
+		}
+
+		input {
+			margin: 10px;
+			padding: 10px;
+			border-radius: 5px;
+			outline: none;
+			width: 90%;
+			border: 0px;
+			box-shadow: 0 0 5px #333;
+			font-size: 16px;
+			color: #333;
+			background-color: #f8f8f8;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+
+		.btn {
+			font-weight: bold;
+			font-size: 20px;
+			width: 25%;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		.btn:hover {
+			background-color: #e8e8e8;
+		}
+	</style>
+	<body>
+		<h2 style="margin-left: 7.5%; position: fixed">
+			<a href="/">Back</a>
+		</h2>
+
+		<div
+			class="container"
+			id="container">
+			<div class="box_2">
+				<h1>Add</h1>
+				<form
+					action="/panel/add"
+					method="post">
+					<input
+						type="text"
+						name="title"
+						placeholder="Title"
+						required
+						minlength="2"
+						maxlength="32" />
+					<input
+						type="text"
+						name="project_description"
+						placeholder="Project description"
+						minlength="2"
+						maxlength="256" />
+					<input
+						type="text"
+						name="name"
+						placeholder="Name"
+						required
+						minlength="2"
+						maxlength="32" />
+					<input
+						type="text"
+						name="age"
+						placeholder="Age *only numbers"
+						required
+						minlength="1"
+						maxlength="2"
+						pattern="^[0-9]+$" />
+					<input
+						type="text"
+						name="author_description"
+						placeholder="Author description"
+						minlength="2"
+						maxlength="128" />
+					<input
+						type="submit"
+						value="Done"
+						class="btn" />
+				</form>
+			</div>
+			<div class="box_2">
+				<h1>Update</h1>
+				<hr />
+				<form
+					action="/panel/update"
+					method="post">
+					<h3>Search by:</h3>
+					<input
+						type="text"
+						name="searchedTitle"
+						placeholder="Project title"
+						required
+						minlength="2"
+						maxlength="32" />
+					<input
+						type="text"
+						name="searchedName"
+						placeholder="Author name"
+						required
+						minlength="2"
+						maxlength="32" />
+					<h3>Change to:</h3>
+					<input
+						type="text"
+						name="title"
+						placeholder="Title"
+						required
+						minlength="2"
+						maxlength="32" />
+					<input
+						type="text"
+						name="project_description"
+						placeholder="Project description"
+						minlength="2"
+						maxlength="256" />
+					<input
+						type="text"
+						name="name"
+						placeholder="Name"
+						required
+						minlength="2"
+						maxlength="32" />
+					<input
+						type="text"
+						name="age"
+						placeholder="Age *only numbers"
+						required
+						minlength="1"
+						maxlength="2"
+						pattern="^[0-9]+$" />
+					<input
+						type="text"
+						name="author_description"
+						placeholder="Author description"
+						minlength="2"
+						maxlength="128" />
+					<input
+						type="submit"
+						value="Done"
+						class="btn" />
+				</form>
+			</div>
+			<div class="box_2">
+				<h1>Delete</h1>
+				<hr />
+				<h3>Where:</h3>
+				<form
+					action="/panel/delete"
+					method="post">
+					<input
+						type="text"
+						name="title"
+						placeholder="Project title"
+						required
+						minlength="2"
+						maxlength="32" />
+					<input
+						type="text"
+						name="name"
+						placeholder="Author name"
+						required
+						minlength="2"
+						maxlength="32" />
+					<input
+						type="submit"
+						value="Done"
+						class="btn" />
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

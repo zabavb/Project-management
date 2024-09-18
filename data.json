@@ -1,0 +1,17 @@
+[
+	{
+		"title": "Emazing!",
+		"description": "The newest and the coolest",
+		"author": { "name": "Optimus Prime", "age": "34", "description": "I'm old." }
+	},
+	{
+		"title": "New project",
+		"description": "some 2",
+		"author": { "name": "John Mikles", "age": "45", "description": "some" }
+	},
+	{
+		"title": "Bateman",
+		"description": "author description...",
+		"author": { "name": "Patrick Bateman", "age": "21", "description": "description" }
+	}
+]

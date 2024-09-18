@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Main</title>
+	</head>
+	<style>
+		body,
+		html {
+			margin: 0;
+		}
+		.box {
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			justify-content: center;
+			color: #333;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			font-size: 25px;
+			font-weight: bold;
+			background-color: #f8f8f8;
+			transition: background-color 0.3s;
+			border-radius: 5px;
+			box-shadow: 0 0 5px #333;
+			letter-spacing: 1px;
+			word-spacing: 1px;
+		}
+
+		.box:hover {
+			background-color: #e8e8e8;
+		}
+
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			gap: 20px;
+			padding: 20px;
+			font-family: Arial, sans-serif;
+			font-size: 20px;
+			text-align: center;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<div
+				class="box"
+				onclick="location.href='/projects'">
+				Projects
+			</div>
+			<div
+				class="box"
+				onclick="location.href='/authors'">
+				Authors
+			</div>
+			<div
+				class="box"
+				onclick="location.href='/panel'">
+				Panel
+			</div>
+		</div>
+	</body>
+</html>
